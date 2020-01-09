@@ -1,0 +1,63 @@
+{
+    "common": {
+        "name": "netpoint",
+        "version": "1.0.0",
+        "news": {
+            "1.0.0": {
+                "en": "Netpoint SmartHome",
+                "de": "Netpoint SmartHome"
+            }
+        },
+        "title": "Netpoint SmartHome",
+        "titleLang": {
+            "en": "Netpoint SmartHome",
+            "de": "Netpoint SmartHome"
+        },
+        "desc": {
+             "en": "Netpoint SmartHome",
+            "de": "Netpoint SmartHome"
+        },
+        "authors": [
+            "Author <info@netpoint.de>"
+        ],
+        "keywords": [
+            "ioBroker",
+			"netpoint"
+        ],
+        "license": "Netpoint internal license",
+        "platform": "Javascript/Node.js",
+        "main": "main.js",
+        "icon": "netpoint.png",
+        "enabled": true,
+        "extIcon": "https://netpoint-DevOps@dev.azure.com/netpoint-DevOps/SmartHome/_git/ioBroker.netpoint/admin/demo.png",
+        "readme": "https://netpoint-DevOps@dev.azure.com/netpoint-DevOps/SmartHome/_git/ioBroker.netpoint/README.md",
+        "loglevel": "info",
+        "mode": "daemon",
+        "type": "general",
+        "compact": true,
+        "materialize": true,
+        "materializeTab": true,
+        "adminTab": {
+            "singleton": true,
+            "name": {
+                "en": "Netpoint SmartHome",
+                "de": "Netpoint SmartHome"
+             },
+            "link": "www.netpoint.de",
+            "fa-icon": "info"
+        },
+        "supportCustoms": true,
+        "dependencies": [
+            {
+                "js-controller": ">=1.4.2"
+            }
+        ]
+    },
+    "native": {
+		"ipaddress": "0.0.0.0",
+		"port": "8084",
+		"zip": "netpoint.zip"
+    },
+    "objects": [],
+    "instanceObjects": []
+}

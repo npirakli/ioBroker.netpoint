@@ -1,0 +1,34 @@
+{
+  "name": "iobroker.netpoint",
+  "version": "1.0.0",
+  "description": "Netpoint SmartHome Adapter",
+  "author": {
+    "name": "Netpoint GmbH",
+    "email": "info@netpoint.de"
+  },
+  "homepage": "https://netpoint.de",
+  "license": "MIT",
+  "keywords": [
+    "ioBroker",
+    "netpoint",
+	"demo"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://netpoint-DevOps@dev.azure.com/netpoint-DevOps/SmartHome/_git/ioBroker.netpoint"
+  },
+  "dependencies": {
+    "@iobroker/adapter-core": "^1.0.3"
+  },
+  "devDependencies": {
+   
+  },
+  "main": "main.js",
+  "scripts": {
+   
+  },
+  "bugs": {
+    "url": "https://netpoint-DevOps@dev.azure.com/netpoint-DevOps/SmartHome/_git/ioBroker.netpoint/issuss"
+  },
+  "readmeFilename": "README.md"
+}

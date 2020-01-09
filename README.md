@@ -1,0 +1,1 @@
+Netpoint SmartHome Adapter
