@@ -1,21 +1,21 @@
 {
     "common": {
-        "name": "netpoint",
+        "name": "npemployees",
         "version": "1.0.0",
         "news": {
             "1.0.0": {
-                "en": "Netpoint SmartHome",
-                "de": "Netpoint SmartHome"
+                "en": "Netpoint Employee Manager Adapter",
+                "de": "Netpoint Employee Manager Adapter"
             }
         },
-        "title": "Netpoint SmartHome",
+        "title": "Netpoint Employee Manager Adapter",
         "titleLang": {
-            "en": "Netpoint SmartHome",
-            "de": "Netpoint SmartHome"
+            "en": "Netpoint Employee Manager Adapter",
+            "de": "Netpoint Employee Manager Adapter"
         },
         "desc": {
-             "en": "Netpoint SmartHome",
-            "de": "Netpoint SmartHome"
+             "en": "Netpoint Employee Manager Adapter",
+            "de": "Netpoint Employee Manager Adapter"
         },
         "authors": [
             "Author <info@netpoint.de>"
@@ -24,13 +24,12 @@
             "ioBroker",
 			"netpoint"
         ],
-        "license": "Netpoint internal license",
         "platform": "Javascript/Node.js",
         "main": "main.js",
-        "icon": "netpoint.png",
+        "icon": "icon.png",
         "enabled": true,
-        "extIcon": "https://github.com/npirakli/ioBroker.netpoint/netpoint.png",
-        "readme": "https://github.com/npirakli/ioBroker.netpoint/master/blob/README.md",
+        "extIcon": "icon.png",
+        "readme": "README.md",
         "loglevel": "info",
         "mode": "daemon",
         "type": "general",
@@ -40,8 +39,8 @@
         "adminTab": {
             "singleton": true,
             "name": {
-                "en": "Netpoint SmartHome",
-                "de": "Netpoint SmartHome"
+                "en": "Netpoint Employee Manager Adapter",
+                "de": "Netpoint Employee Manager Adapter"
              },
             "link": "www.netpoint.de",
             "fa-icon": "info"
@@ -54,9 +53,11 @@
         ]
     },
     "native": {
-		"ipaddress": "0.0.0.0",
-		"port": "8084",
-		"zip": "netpoint.zip"
+		"host": "localhost",
+        "port": "3306",
+        "database": "iobroker",
+        "dbuser":"",
+        "dbpass": ""
     },
     "objects": [],
     "instanceObjects": []

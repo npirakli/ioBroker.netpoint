@@ -1,0 +1,120 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- Materialze style -->
+    <link rel="stylesheet" type="text/css" href="../../css/adapter.css"/>
+    <link rel="stylesheet" type="text/css" href="../../lib/css/materialize.css">
+
+    <script type="text/javascript" src="../../lib/js/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../../socket.io/socket.io.js"></script>
+
+    <script type="text/javascript" src="../../js/translate.js"></script>
+    <script type="text/javascript" src="../../lib/js/materialize.js"></script>
+    <script type="text/javascript" src="../../js/adapter-settings.js"></script>
+
+<script type="text/javascript">
+    
+    function load(settings, onChange) 
+    {
+        if(!settings) { return }
+
+        if(settings.host != undefined)
+        {
+            $("#host").val(settings.host);
+        }
+    
+        if(settings.port != undefined)
+        {
+            $("#port").val(settings.port);
+        }
+
+        if(settings.database != undefined)
+        {
+            $("#database").val(settings.database);
+        }
+
+        if(settings.dbuser != undefined)
+        {
+            $("#dbuser").val(settings.dbuser);
+        }
+
+        if(settings.dbpass != undefined)
+        {
+            $("#dbpass").val(settings.dbpass);
+        }
+    }
+    
+    function save(callback) 
+    {
+        var settings = {};
+
+        $('.value').each(function () 
+        {
+            var $this = $(this);
+            var id = $this.attr('id');
+
+            if ($this.attr('type') === 'checkbox') {
+                settings[id] = $this.prop('checked');
+            } else {
+                settings[id] = $this.val();
+           }
+        });
+
+        callback(settings);
+    }
+</script>
+<style>
+    .adapter-container>div {
+        margin-bottom: 0 !important;
+    }
+    .page {
+        height: calc(100% - 50px) !important;
+    }
+    .marg{
+        margin-top: 3em;
+    }
+</style>
+</head>
+<body>
+    <div class="m adapter-container">
+        <div class="row">
+            <div class="col s12">
+                <ul class="tabs">
+                    <li class="tab col s3"><a href="#tab-main" class="translate active">DB settings</a></li>
+                </ul>
+            </div>
+            <div id="tab-main" class="col s12 page">
+                <div class="row">
+                    <div class="col s6">
+                        <img src="icon.png" class="logo">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field real-sql col s12 m3 l4">
+                        <input id="host" type="text" class="value" />
+                        <label class="translate" for="host">Host</label>
+                    </div>
+                    <div class="input-field real-sql col s12 m3 l4 ">
+                        <input id="port" type="number" min="1" max="65565" class="value" />
+                        <label class="translate" for="port">Port</label>
+                    </div>
+                    <div class="input-field ms-sql real-sql col s12 m6 l4">
+                        <input id="database" type="text" class="value" />
+                        <label class="translate" for="database">DB Name</label>
+                    </div>
+                </div>
+                <div class="row real-sql">
+                    <div class="input-field col s12 m6 l4">
+                        <input id="dbuser" type="text" class="value" />
+                        <label class="translate" for="dbuser">User</label>
+                    </div>
+                    <div class="input-field col s12 m3 l4">
+                        <input id="dbpass" type="password" class="value" />
+                        <label class="translate" for="dbpass">Password</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

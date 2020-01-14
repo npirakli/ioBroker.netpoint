@@ -1,13 +1,12 @@
 {
-  "name": "iobroker.netpoint",
+  "name": "iobroker.npemployees",
   "version": "1.0.0",
-  "description": "Netpoint SmartHome Adapter",
+  "description": "Netpoint Employee Manager Adapter",
   "author": {
     "name": "Netpoint GmbH",
     "email": "info@netpoint.de"
   },
-  "homepage": "https://github.com/npirakli/ioBroker.netpoint",
-  "license": "MIT",
+  "homepage": "https://www.netpoint.de",
   "keywords": [
     "ioBroker",
     "netpoint",
@@ -15,7 +14,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/npirakli/ioBroker.netpoint"
+    "url": "https://www.netpoint.de"
   },
   "dependencies": {
     "@iobroker/adapter-core": "^1.0.3"
@@ -28,7 +27,7 @@
    
   },
   "bugs": {
-    "url": "https://github.com/npirakli/ioBroker.netpoint/issuss"
+    "url": "https://www.netpoint.de"
   },
   "readmeFilename": "README.md"
 }
