@@ -217,7 +217,7 @@ async function SyncBuildings()
             {
                 adapter.log.info("Sync Building: " + JSON.stringify(Buildings[b]));
 
-                addIoBrokerObject(Buildings[b].name, "meta", { name: Buildings[b].name, type:'string', role:'value', read:true, write:false }, { _id: Buildings[b].id, _name: Buildings[b].name }).then(function(obj){ 
+                addIoBrokerObject(Buildings[b].name, "meta", { name: Buildings[b].name, type:'string', role:'value', read:true, write:false }, { _id: Buildings[b].id, _name: Buildings[b].name, np_table: "np_building" }).then(function(obj){ 
                     adapter.log.info("Building synced: " + JSON.stringify(obj));
                 });
             }
@@ -244,7 +244,7 @@ async function SyncLevels()
                     id = Levels[l].building_name + "." + Levels[l].name;
                 }
 
-                addIoBrokerObject(id, "meta", { name: Levels[l].name, type:'string', role:'value', read:true, write:false }, { _id: Levels[l].id, _name: Levels[l].name, _building_id: Levels[l].building_id }).then(function(obj){ 
+                addIoBrokerObject(id, "meta", { name: Levels[l].name, type:'string', role:'value', read:true, write:false }, { _id: Levels[l].id, _name: Levels[l].name, _building_id: Levels[l].building_id, np_table: "np_level" }).then(function(obj){ 
                     adapter.log.info("Level synced: " + JSON.stringify(obj));
                 });
             }
@@ -271,7 +271,7 @@ async function SyncRooms()
                     id = Rooms[r].building_name + "." + Rooms[r].level_name + "." + Rooms[r].name;
                 }
 
-                addIoBrokerObject(id, "meta", { name: Rooms[r].name, type:'string', role:'value', read:true, write:false }, { _id: Rooms[r].id, _name: Rooms[r].name, _building_id: Rooms[r].building_id, _level_id: Rooms[r].level_id }).then(function(obj){ 
+                addIoBrokerObject(id, "meta", { name: Rooms[r].name, type:'string', role:'value', read:true, write:false }, { _id: Rooms[r].id, _name: Rooms[r].name, _building_id: Rooms[r].building_id, _level_id: Rooms[r].level_id, np_table: "np_room" }).then(function(obj){ 
                     adapter.log.info("Room synced: " + JSON.stringify(obj));
                 });
             }
@@ -299,7 +299,7 @@ async function SyncEmployees()
                     id = Employees[e].building_name + "." + Employees[e].level_name + "." + Employees[e].room_name + "." + name;
                 }
 
-                addIoBrokerObject(id, "meta", { name: name, type:'string', role:'value', read:true, write:false }, { _id: Employees[e].id, _name: name, _firstname: Employees[e].firstname, _lastname: Employees[e].lastname, _phone: Employees[e].phone, _email: Employees[e].email, _account: Employees[e].account, _building_id: Employees[e].building_id, _level_id: Employees[e].level_id, _room_id: Employees[e].room_id }).then(function(obj){ 
+                addIoBrokerObject(id, "meta", { name: name, type:'string', role:'value', read:true, write:false }, { _id: Employees[e].id, _name: name, _firstname: Employees[e].firstname, _lastname: Employees[e].lastname, _phone: Employees[e].phone, _email: Employees[e].email, _account: Employees[e].account, _building_id: Employees[e].building_id, _level_id: Employees[e].level_id, _room_id: Employees[e].room_id, np_table: "np_employee" }).then(function(obj){ 
                     adapter.log.info("Employee synced: " + JSON.stringify(obj));
                 });
             }
